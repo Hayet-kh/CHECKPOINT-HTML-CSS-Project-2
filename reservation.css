@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(250, 235, 215, 0.2), rgba(250, 235, 215, 0.5));
+    overflow-x:hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%;
+}
+header .nom-restaurant h1{
+    color: rgb(116, 111, 111);
+    font-size: 50px;
+    letter-spacing: 10px;
+    position: absolute;
+    left: 12%;
+    top: 10%;
+    width: 100%;
+    white-space: nowrap;
+    opacity: 0.2;
+}
+h1::first-letter{
+    font-size: 10rem;
+    font-family: 'Dancing Script', 'Playwrite SK', sans-serif;
+}
+header .logo img{
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+} 
+header .discard{
+    height: 75%;
+    width: 7%;
+    border: 1px solid rgba(116, 111, 111, 0.3);
+    margin-right: 2%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+}
+header .discard a{
+    text-decoration: none;
+    color: rgb(116, 111, 111);
+    font-size: 50px;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: lighter;
+    margin-top: 10%;
+}
+/* PBROBLEM TO FIX: Problem wen we When hover */
+header .discard:hover{
+    opacity: 1;
+    border: 1px solid rgb(71, 69, 69);
+    color: rgb(71, 69, 69);
+    background-color: rgba(255, 2455, 250, 0.5);
+    width: 10%;
+    height: 110%;
+    transition: 0.4s;
+    margin-top: 2.5%;
+    margin-right: 1%;
+}
+header .discard:hover a{
+    font-size: 80px;
+}
+main{
+    margin-left: 5%;
+}
+form{
+    margin: 1% auto auto auto;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+form *{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+form p{
+    letter-spacing: 2.5px;
+    font-weight: 300;
+    font-size: 0.9rem;
+    padding: 1% 0 15% 0;
+    text-align: right;
+}
+form h2{
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 5px;    
+    font-family: 'Dancing Script', 'Playwrite SK', sans-serif;
+    text-align: center;
+    opacity: 0.9;
+    margin-top: -5%;
+    margin-left: 3%;
+}
+form h2::first-letter{
+    font-size: 3.5rem;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3% 0;  
+}
+.label-name, .label-seats, .label-time, .label-date{
+    font-size: 1.2rem;
+    margin-top: 2%;
+    display: block;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+.input-label-required, .input-label-optional{
+    color: rgba(116, 111, 111, 0.7);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    font-weight: light;
+}
+#name, #seats, #time, #date{
+    border: 1px solid rgba(116, 111, 111, 0.3);
+    border-radius: 3px;  
+    margin-top: 1%;
+    margin-bottom: 2%;
+    padding: 1.5%;
+}
+#name, #seats, #time, #date, #name::placeholder{
+    /*color: rgba(116, 111, 111, 1);*/
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 0.85rem;
+}
+option{
+    font-weight: normal;
+    color: black;
+}
+#name:focus, #seats:focus, #time:focus, #date:focus {
+    border: 1px solid rgb(71, 69, 69);
+    outline: none;
+    color:black;
+}
+.form-actions, .form-group{
+    width: 100%;
+    margin:0;
+}
+#submit{
+    background-color: rgb(71, 69, 69);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+    padding: 2%;
+    border: none;
+    border-radius: 3px;
+    margin-top: 2%;
+    cursor: pointer;
+}

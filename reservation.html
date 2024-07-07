@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reservation.css">
+    <link rel="stylesheet" href="fonts.css">
+    <title>La Dolce Vita - Reservation</title>
+</head>
+<body>
+    <header>
+        <div class="nom-logo">
+            <div class="nom-restaurant">
+                <h1>La Dolce Vita</h1>
+            </div> 
+            <div class="logo">
+                <img src="Assets\images\logo1.png" alt="Logo">
+            </div>
+        </div>
+        <div class="discard">
+            <a href="javascript:history.back()" alt="Home Page">X</a>
+        </div>  
+    </header>
+    <main>
+        <form action="" >
+            <div class="form-header">
+                <h2>Reservation</h2>
+                <p>Fill in the form below to make a reservation</p>
+            </div>
+            <div class="form-group">
+                <div class="form-name">
+                    <label for="name" class="label-name" >
+                        <span class="input-label-show" >Name
+                            <span class="input-label-required">- Required</span>
+                        </span>
+                    </label>
+                    <input type="text" id="name" name="name" placeholder="Write name under which the reservation is made." aria-required="true" required>
+                </div>
+                <div class="seats">
+                    <label for="seats" class="label-seats">
+                        <span class="input-label-show" >Number of People
+                            <span class="input-label-required">- Required</span>
+                        </span>
+                    </label>
+                    <select id="seats" name="seats" aria-required="true" required>
+                        <option value="" selected="" disabled="">Number of People</option>
+                        <option value="1">1 Person</option>
+                        <option value="2">2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                        <option value="5">5 People</option>
+                        <option value="6">6 People</option>
+                        <option value="7">7 People</option>
+                        <option value="8">8+ People</option>
+                    </select>
+                </div>
+                <div class="date">
+                    <label for="date" class="label-date">
+                        Date <span class="input-label-required">- Required</span>
+                    </label>
+                    <input type="date" id="date" name="date" min="2024-07-01" max="2025-07-31" aria-required="true" required>
+                </div>
+                <div class="time">
+                    <label for="time" class="label-time">
+                        Time <span class="input-label-optional">- Optional</span>
+                    </label>
+                    <select id="time" name="time" aria-required="false" placeholder="Time">
+                        <option value="" selected="" disabled="">Time</option>
+                        <option value="1100">11:00 AM</option>
+                        <option value="1130">11:30 AM</option>
+                        <option value="1200">12:00 PM</option>
+                        <option value="1230">12:30 PM</option>
+                        <option value="1300">1:00 PM</option>
+                        <option value="1330">1:30 PM</option>
+                        <option value="1400">2:00 PM</option>
+                        <option value="1430">2:30 PM</option>
+                        <option value="1500">3:00 PM</option>
+                        <option value="1530">3:30 PM</option>
+                        <option value="1600">4:00 PM</option>
+                        <option value="1630">4:30 PM</option>
+                        <option value="1700">5:00 PM</option>
+                        <option value="1730">5:30 PM</option>
+                        <option value="1800">6:00 PM</option>
+                        <option value="1830">6:30 PM</option>
+                        <option value="1900">7:00 PM</option>
+                        <option value="1930">7:30 PM</option>
+                        <option value="2000">8:00 PM</option>
+                        <option value="2030">8:30 PM</option>
+                        <option value="2100">9:00 PM</option>
+                        <option value="2130">9:30 PM</option>
+                        <option value="2200">10:00 PM</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" id="submit">Find A Table</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

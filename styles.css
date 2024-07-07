@@ -1,0 +1,448 @@
+/* THIS RESTAURANT DOESN'T EXISTE. THE WEBSITE IS MADE FOR THE PURPOSE OF LEARNING, ALL THE IMAGES ARE FROM THE INTERNET, THEY BELONGS TO OTHER CREATORS/PLACES */
+
+/* PBROBLEM TO FIX: WEBSITE NOT RESPONSIVE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgb(101, 89, 73), antiquewhite);
+    overflow-x:hidden;
+}
+
+/*LANDING PAGE SECTION*/
+#landing-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+    background: url('Assets/images/background.jpg');
+    background-size: cover; /* it will cover the space*/
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+#landing-page header{
+    width: 99%;
+    height: 120px;
+    background:linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.4));
+    position: fixed;
+    top:0;
+    z-index: 2;
+}
+#landing-page nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#landing-page .logo img{
+    width: 80px;
+    height: 120px;
+    position: fixed;
+    top: 70%;
+    right: 3%;
+} 
+#landing-page nav .nom-restaurant{
+    width: 35%;
+} 
+#landing-page nav .navbar{
+    width: 65%;
+    text-align: center;
+    margin-top: 1%;
+} 
+#landing-page nav .nom-restaurant h1{
+    color: white;
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin-left: 10%;
+    margin-top: -2%;
+}
+#landing-page nav ul{
+    display:flex;
+    justify-content: center;
+    gap: 7.5%;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+    width: 100%;
+}
+#landing-page nav ul li a{ 
+    color: rgba(252, 252, 252, 0.852);
+    text-decoration: none;
+}
+#landing-page nav ul li a:hover{ 
+    font-size: 25px;
+    color:white;
+}
+#landing-page .menu{
+    margin-right: 5%;
+    margin-left: 5%;
+}
+#landing-page .menu a{
+    font-weight: 700;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+#landing-page .reservation{
+    text-align: center;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+#landing-page .reservation a{
+    font-size: 18px;
+    font-weight: 500;
+    background-color: rgba(0,0,0,0.7);
+    /*background: transparent;*/
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: 1px solid white;
+}
+#landing-page .reservation a:hover{
+    background:white;
+    color: black;
+}
+
+/*MAIN SECTION*/
+#about-section, #hours-location-section, #menu-section, #galery-section{
+    margin: 5%;
+    padding: 2%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#menu-section{
+    margin: 0;
+}
+/*MENU SECTION*/
+#container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+/* PBROBLEM TO FIX: When clicking on an element of the aside nav, the top part of the text is covered with the MAIN-NAVBAR (top/horizontal) - nedd to center the content */
+#menu-section aside{
+    background-size: cover; /* it will cover the space*/
+    width: 16%;
+    height: 100%;
+    padding-top: 5%;
+    position: sticky;
+    top: 0;    
+    background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55));  
+    margin-top: -5%;
+    margin-bottom: -20%;
+}
+#menu-section .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 2% 2%;
+    width: 90%;
+    height: 100vh;
+}
+#menu-section .menu li {
+    padding: 3%;
+    margin: 0%;
+}
+#menu-section .menu a{
+    text-decoration: none;
+    font-size: 26px;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Anton SC', sans-serif;
+    letter-spacing: 1px;
+    line-height: 0%;
+}
+#menu-section .menu a:hover {
+    font-size: 30px;
+    text-shadow: 2px 2px 2px rgba(154, 154, 154, 0.688);
+    color: white;
+}
+#menu-section aside .traduction {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    padding: 0%;
+    margin: 0%;
+    line-height: 0%;
+}
+#menu-section main{
+    background-size: cover; /* it will cover the space*/
+    width: 84%;
+    padding: 7% 4.5% 3% 1%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1%;
+}
+#menu-section main .traduction {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 12px;
+    line-height: 0%;
+}
+#menu-section main .traduction::before {
+    content: "\A"; /* Ajoute un saut de ligne */
+    white-space: pre; /* Empêche le texte de s'écraser */
+    display: block; /* Transforme le pseudo-élément en bloc */
+}
+#antipasti, #primi_piatti, #secondi_piatti, #contorni, #dolci, #bevande {
+    border: 1px solid rgb(93, 93, 93);
+    border-radius: 1%;
+    padding: 2%;
+    margin: 1% 2% 1% 5%;
+    width: 95%;
+    height: 100%;
+    background: linear-gradient(rgba(250, 235, 215, 0.7), rgb(101, 89, 73, 0.4));
+    padding-bottom: 5%;
+}
+#antipasti h1, #primi_piatti h1, #secondi_piatti h1, #contorni h1, #dolci h1, #bevande h1 {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    text-align: center;
+    font-size: 26px;
+    margin: 2% 2% 3% 2%;
+}
+#antipasti li, #primi_piatti li, #secondi_piatti li, #contorni li, #dolci li, #bevande li{
+    display: flex;
+    align-items: center;
+}
+.photo-miniature {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photo-miniature:hover img{
+    width: 120%;
+    margin-left: -25%;
+    margin-top: 0%;
+    animation: rotate 4s linear forwards; /* Animation de rotation, 1 tour en 4 secondes */
+}
+.photo-miniature img{
+    width: 75%;
+    border-radius: 50%;
+}
+.nom-prix-ingredient{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+}
+.nom_prix {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+}
+#antipasti h2, #primi_piatti h2, #secondi_piatti h2, #contorni h2, #dolci h2, #bevande h2 {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-style: oblique;
+    width: 70%;
+    margin-top: 7%;
+}
+.ingredient {
+    margin: 4% 0% 7% 0%;
+    text-align: justify;
+    width: 80%;
+}
+.prix {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    width: 10%;
+    align-self: center;
+    text-align: right;
+    margin-right: 5%;
+}
+#menu-section h1::first-letter{
+    font-size: 80px;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+#bevande .photo-miniature:hover img{
+    width: 80%;
+    margin-top: 0%;
+    animation: none;
+}
+#bevande .photo-miniature img{
+    width: 40%;
+    border-radius: 0%;
+}
+
+/*ABOUT SECTION*/
+#about-section .image, .about-introduction, #hours-location-section .imgage, .about-hours-location{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about-section .image img{
+    width: 85%;
+    height: 90%;
+    margin-top: -5%;
+}
+.about-introduction, .about-hours-location{
+    text-align: justify;
+    padding: 7% 2%;
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+}
+.about-introduction h1{
+    color: white;
+    font-size: 50px;
+    letter-spacing: 10px;
+    position: relative;
+    left: 80%;
+    top: 10%;
+    font-family: 'Playwrite SK', sans-serif;
+    width: 100%;
+    margin-bottom: 20%;
+    margin-top: 10%;
+}
+.about-introduction .about-paragraph p{
+    width: 100%;
+    font-size: 1.3rem;
+    font-family:"Arial Narrow", Arial, sans-serif;
+    font-style: italic;
+    padding: 3%;
+}
+.text-nom-restaurant, .visit-us{
+    font-family:  'Freehand', "Roboto", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 1.7rem;
+    font-style: normal;
+}
+h1::first-letter{
+    font-size: 80px;
+    font-family: 'Dancing Script', 'Playwrite SK', sans-serif;
+}
+
+/*HOURS AND LOCATION SECTION*/
+.fst-letter{
+    display : inline-block;
+}
+.fst-letter::first-letter{
+    font-size: 60px;
+}
+#hours-location-section .image img{
+    margin-top: -5%;
+}
+.about-hours-location{
+    margin-top: 3%;
+}
+.hours-location{
+    margin-top: 4%;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 16x;
+}
+.about-hours-location p{
+    margin: 2% 0;
+}
+.hours-location p{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5rem;
+}
+.hours-location h2{
+    margin-top: 3%;
+}
+.hours-location h1{
+    font-size: 40px;
+    letter-spacing: 10px;
+    margin: 6% 0 9% 0;
+    text-align: center;
+}
+
+/*GALERY SECTION*/
+#galery-section{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+#galery-section .galery img{
+    z-index: -1;
+}
+#galery-section h1{
+    margin-bottom: -2%;
+    z-index: 1;
+    text-align: center;
+    font-family: 'Playwrite SK', sans-serif;
+}
+#galery-section h1::first-letter{
+    font-size: 150px;
+    font-family: 'Playwrite SK', sans-serif;
+}
+
+/*FOOTER SECTION*/
+footer{
+    color: white;
+    text-align: center;
+    margin-top: 16%;
+    width: 100%;
+    height: 20vh;   
+    background:linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.2));
+}
+.contact{
+    text-align: left;
+    width: 50%;
+    font-weight: bold;    
+    padding: 1.5% 0 1% 15%;
+    margin: auto;
+}
+.contact *{
+    padding: 0%;  
+    margin: 0%;  
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+.contact h2{
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+    font-family: 'Anton SC', sans-serif;
+    letter-spacing: 5px;
+} 
+.contact .phone{
+    /*color: rgba(118, 67, 24, 0.708);*/
+    color: rgba(250, 235, 215, 0.79);
+    font-size: large;
+    font-weight: bold;
+}
+.contact a{
+    text-decoration: none; 
+    color: rgba(250, 235, 215, 0.79);
+    font-size: large;
+    font-weight: bold;
+}
+.contact .phone:hover, .contact a:hover{
+    color: antiquewhite;
+    font-size: x-large;
+    opacity: 1;
+}
+.copyrights{
+    left: 40%;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0.5;
+}
+
+/*ANIMATION*/
+@keyframes rotate {
+    from {
+      transform: rotate(0deg); /* Rotation initiale à 0 degrés */
+    }
+    to {
+      transform: rotate(360deg); /* Rotation complète (1 tour) à 360 degrés */
+    }
+ }
